@@ -6,12 +6,21 @@
 
 
 
-TEST_CASE("testing the factorial function") { 
+TEST_CASE("testing FALSE...") { 
 
-  CHECK(isPrimeInteger(101));   
+  CHECK_FALSE(isPrimeInteger(-5));
+  CHECK_FALSE(isPrimeInteger(597));
+  CHECK_FALSE(isPrimeInteger(-1));
+  CHECK_FALSE(isPrimeInteger(1010097));   
   CHECK_FALSE(isPrimeInteger(102));   
-
-  //CHECK(isPrimeInteger(0) == 1);   
-
+  CHECK_FALSE(isPrimeInteger(1));
+  CHECK_FALSE(isPrimeInteger(0));   
+}
+TEST_CASE("testing TRUE..."){
+  CHECK(isPrimeInteger(5));
+  CHECK(isPrimeInteger(3));
+  CHECK(isPrimeInteger(541));
+  CHECK(isPrimeInteger(1223));   
+  CHECK(isPrimeInteger(17));  
 
 };

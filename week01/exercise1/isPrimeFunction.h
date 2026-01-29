@@ -6,7 +6,7 @@
 bool isPrimeInteger(int pTest) {
     bool isPrime = true;
     if (pTest == 2) return isPrime; //edge case 2
-    if (pTest < 1) return false; //edge case 1 or lower
+    if (pTest <= 1) return false; //edge case 1 or lower
     
 
     for (int i = 2; i < static_cast<int>(floor(sqrt(pTest))); i++) {
